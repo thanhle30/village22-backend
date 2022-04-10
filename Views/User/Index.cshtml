@@ -1,0 +1,81 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+@if (User.IsInRole("Admin"))
+{
+    <h1 class="mb-2">Manage Users</h1>
+}
+else
+{
+    <h1 class="mb-2">Manage My Account</h1>
+}
+
+<h5 class="mt-2"><a asp-controller="User" asp-action="ChangePassword">Change Password</a></h5>
+
+@if (User.IsInRole("Admin"))
+{
+    <h5 class="mt-2"><a asp-controller="Account" asp-action="Register">Add a User</a></h5>
+    <table class="table table-bordered table-striped table-sm">
+        <thead>
+            <tr><th>Username</th><th>Roles</th><th>Name</th><th></th><th></th></tr>
+        </thead>
+        <tbody>
+            @if (Model.Users.Count() == 0)
+            {
+                <tr><td colspan="5">There are no user accounts.</td></tr>
+            }
+            else
+            {
+                @foreach (User user in Model.Users)
+                {
+        <tr>
+            <td>@user.UserName</td>
+            <td>
+                @foreach (string roleName in user.RoleNames)
+                {
+                    <div>@roleName</div>
+                }
+            </td>
+            <td>@(user.FirstName + " " + user.LastName)</td>
+            <td>
+                <form method="post" asp-action="Delete" asp-route-id="@user.Id">
+                    <button type="submit" class="btn btn-primary"> Delete User</button>
+                </form>
+            </td>
+            @*<td>
+            <form method="post" asp-action="AddToAdmin" asp-route-id="@user.Id">
+                <button type="submit" class="btn btn-primary"> Add To Admin</button>
+            </form>
+        </td>*@
+            <td>
+                <form method="post" asp-action="AddToTeacher" asp-route-id="@user.Id">
+                    <button type="submit" class="btn btn-primary"> Add To Teacher</button>
+                </form>
+            </td>
+            <td>
+                <form method="post" asp-action="AddToTa" asp-route-id="@user.Id">
+                    <button type="submit" class="btn btn-primary"> Add To TA</button>
+                </form>
+            </td>
+            @*<td>
+            <form method="post" asp-action="RemoveFromAdmin" asp-route-id="@user.Id">
+                <button type="submit" class="btn btn-primary"> Remove From Admin</button>
+            </form>
+        </td>*@
+            <td>
+                <form method="post" asp-action="RemoveFromTeacher" asp-route-id="@user.Id">
+                    <button type="submit" class="btn btn-primary"> Remove From Teacher</button>
+                </form>
+            </td>
+            <td>
+                <form method="post" asp-action="RemoveFromTa" asp-route-id="@user.Id">
+                    <button type="submit" class="btn btn-primary"> Remove From Ta</button>
+                </form>
+            </td>
+        </tr>
+                }}
+        </tbody>
+    </table>
+}
