@@ -24,5 +24,14 @@ namespace Village22.Models
         public TaRequestStatus Status { get; set; }
 
         public ICollection<TaMatch> TaMatches { get; set; }
+
+        [NotMapped]
+        public string Description {
+            get
+            {
+                string s = String.Format("Created by: {0}// For course: {1}// Status: {2}", TeachingAssignment.Teacher.Name, TeachingAssignment.Course.Title, Status.Name);
+                return s;
+            }
+        }
     }
 }

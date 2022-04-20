@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Village22.Models.TaMatch>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MessageFromTa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MessageFromTeacher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaRequest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ta.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageFromTa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageFromTeacher)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaRequest.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status.Name)
+            </td>
+            <td>
+                @if (ViewBag.IsAdmin)
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <span>|</span>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <span>|</span>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                }
+                else
+                {
+                    <a asp-action="AcceptMatch" asp-route-id="@item.Id">Accept</a>
+                    <span>|</span>
+                    <a asp-action="RejectMatch" asp-route-id="@item.Id">Reject</a>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

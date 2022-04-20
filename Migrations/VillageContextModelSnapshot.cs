@@ -15,7 +15,7 @@ namespace Village22.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.23")
+                .HasAnnotation("ProductVersion", "3.1.24")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -226,10 +226,7 @@ namespace Village22.Migrations
                     b.Property<int>("StatusId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TaId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TaId1")
+                    b.Property<string>("TaId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("TaRequestId")
@@ -239,7 +236,7 @@ namespace Village22.Migrations
 
                     b.HasIndex("StatusId");
 
-                    b.HasIndex("TaId1");
+                    b.HasIndex("TaId");
 
                     b.HasIndex("TaRequestId");
 
@@ -532,7 +529,7 @@ namespace Village22.Migrations
 
                     b.HasOne("Village22.Models.User", "Ta")
                         .WithMany("TaMatches")
-                        .HasForeignKey("TaId1");
+                        .HasForeignKey("TaId");
 
                     b.HasOne("Village22.Models.TaRequest", "TaRequest")
                         .WithMany("TaMatches")

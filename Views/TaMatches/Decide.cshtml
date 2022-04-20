@@ -1,0 +1,30 @@
+﻿@model Village22.Models.DecideTaMatchViewModel
+
+@{ 
+    var isAccept = (string) ViewData["Title"] == "Accept";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h4>Are you sure to about your decision? If yes, provide a message.</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="@(isAccept ? "AcceptMatch" : "RejectMatch")">
+            <input asp-for="Id" class="form-control" hidden value=@Model.Id />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Message" class="control-label"></label>
+                <textarea asp-for="Message" class="form-control" rows="4" cols="50"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="@(isAccept ? "Accept Match" : "Reject Match")" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Cancel</a>
+</div>

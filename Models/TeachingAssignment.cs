@@ -19,5 +19,8 @@ namespace Village22.Models
         // These are for ease of coding. Not related to structures of the Database
         public Course Course { get; set; }
         public User Teacher { get; set; }
+
+        [NotMapped]
+        public string CourseName { get; }
     }
 }

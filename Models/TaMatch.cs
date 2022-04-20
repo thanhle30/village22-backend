@@ -11,10 +11,12 @@ namespace Village22.Models
     {
         [Key]
         public int Id { get; set; }
+        [Display(Name = "Request")]
         [ForeignKey("TaRequest")]
         public int TaRequestId { get; set; }
+        [Display(Name = "College Student")]
         [ForeignKey("User")]
-        public int TaId { get; set; }
+        public string TaId { get; set; }
         [Display(Name = "Date created")]
         public DateTime DateCreated { get; set; }
         [Display(Name = "Message from proposed TA")]

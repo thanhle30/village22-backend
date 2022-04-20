@@ -184,3 +184,14 @@ D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\Cour
 D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Details.cshtml.g.cs
 D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Edit.cshtml.g.cs
 D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Index.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaRequests\Create.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaRequests\Delete.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaRequests\Details.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaRequests\Edit.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaRequests\Index.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaMatches\Create.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaMatches\Delete.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaMatches\Details.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaMatches\Edit.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaMatches\Index.cshtml.g.cs
+D:\Thanh - Coder\ASP.NET Core\Village22\obj\Debug\netcoreapp3.1\Razor\Views\TaMatches\Decide.cshtml.g.cs
