@@ -2,7 +2,7 @@
 ## Description
 - Built the backend for Village web product
   + Village is an educational website service that matches a qualified college student as a teaching assistant to a middle school teacher in need of support (for more details, see [these slides](/VillageOverview.pdf)).
-  + Developed as a course project at Fairfield University in 2021.
+  + Developed as a course project at Fairfield University in 2021-2022.
  
 ## Tech Stack
 - ASP.NET Core
